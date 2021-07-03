@@ -18,8 +18,8 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	kakaoskill.AddSkill(mux, "/", func(payload kakaoskill.Payload) kakaoskill.Response {
-		return kakaoskill.Response{
+	kakaoskill.AddSkill(mux, "/", func(payload kakaoskill.Payload) *kakaoskill.Response {
+		return &kakaoskill.Response{
 			Template: &kakaoskill.Template{
 				Outputs: []kakaoskill.Component{
 					{
